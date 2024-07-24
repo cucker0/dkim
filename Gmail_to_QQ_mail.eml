@@ -1,0 +1,74 @@
+Received: from mail-wm1-x332.google.com (mail-wm1-x332.google.com [2a00:1450:4864:20::332])
+	by newxmmxsza6-9.qq.com (NewMX) with SMTP id 600162CA
+	for <hanxiao2100@qq.com>; Thu, 18 Jul 2024 13:24:00 +0800
+X-QQ-mid: xmmxsza6-9t1721280240tnw13osd0
+X-QQ-XMAILINFO: OezpMYl8oadHmoJvATOlw+MP9GE4mo+CKd7s6D2ahgM3n3DHufxsnWXnTOfNrE
+	 6H8q5ZvTllpAk9irlVy8EMdtOWOTMKIU5F3dv0KxT0tKucvMelqRnpMZ0/T8mloi1+kX9OW36j6C
+	 YVLhTrjkscs1n6Qn2E50Ky//WV7QAEancGe4yVmgsdK5KVHFJnsVccY+o9vbyyragGeDYtDBvVzu
+	 iyv48BvU9JjPDKjIwj64qkJ1X79UUwQ1DzFw0diaH0yJDE9IdAYr5EEGDen3SceC1NDFv4F8Lre4
+	 7O8SB8rUKXEp+It0c10JiP5Sr+xcRRaKpBb0YaKWX1ayoxeJzls/ydpdilaARNs7OI4XX1lJcV6/
+	 v7eTtiQEofZpBCMxjqfbTBrqTmcdw6+ZvWu/JYReoRqd2kYSnFHF/wMSbk/84lqe8zSDvrYynuOa
+	 qgGoG62tmLDkCGYnyYIqISSm+8HhRM8agldOojpog9ookrWs/kLLEZwM3TMhiQiB9IlGmdJCk7TZ
+	 Ypt+v8V76lQYlN9ILmMicbdnUr6MVNvcbHJvhL/RIun4At8mTUrNEzjB6NoArF80DWa2rbFh5hW7
+	 HbUs+8aS6HbFccPX+ECWYyO7Q4VwMd0hCcGqZ1N93LWlc3x8BB463ShsRmAunFd//bOp+wWi29ni
+	 2ciKhYfzwoIadL2FRwnLgcszkCta+ZUmSfdQNW1EHZQ+TFYmtabBuhEeCqpgQRxykJ7vKZO+Q/9I
+	 70ORJkA6+3Bf0AYINf/GFbO/E0p9zmnincRsxI6H0jtKufdSngGGdcHe+BG2fekLPd+IDxF7W7gY
+	 06UXzdCCJ+bbliLhUcpe5aCwimXFOahpDoHakJhSxD0Cunco+mrvxIfHOW7Cfq2J2FntUm31PcvA
+	 qr8CkUL4Ut2Z2ASTil8qY781R3K2Lg9xj++eS1R2qM3zqhPo6FFd3VnA8Djo5MiVJyu5pPspF5Ge
+	 tzrIRGFQ4xiJAbEG5VGExjHtdK0D++uxJ0KEaUZ62ZvT1lOPxm6WJrhlVTND5cJzuzAFMNFhrGxX
+	 T+MqSBrG4NgrwFm74X2g7wTlcs4+K30KYcWA9F4vnKauQxFO0N8r/mzkf4Ek+FAlXZEXyrC5V4rA
+	 F9lXQpNXNq6mCcNG5wfMHVPb6K8g==
+X-QQ-XMRINFO: MSVp+SPm3vtS1Vd6Y4Mggwc=
+Authentication-Results: mx.qq.com; spf=pass(2a00:1450:4864:20::332) smtp.mailf
+	 rom=<hanxiao2100@gmail.com>; dkim=pass(signature was verified) header.d=gmai
+	 l.com; dmarc=pass(p=NONE sp=QUARANTINE pct=100) header.from=gmail.com
+Received: by mail-wm1-x332.google.com with SMTP id 5b1f17b1804b1-427c4843840so2773395e9.1
+        for <hanxiao2100@qq.com>; Wed, 17 Jul 2024 22:24:01 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1721280239; x=1721885039; darn=qq.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=k6PZ3BBA0FIv7OCGbWMDNiMSvnIntoNPtciA688Nqwo=;
+        b=gzCd0JCJkdOYxGudoEBxop6h6PaYlu7VrJS+N3oBhd++SaxvbkGZoXLPRGSBqW3Ruk
+         OOOmijuHc0Ee7AlP/7AbYKwwYRzQfz3a13ghY+Lqx8NPVumUYNxJTgwgXseY5WYYTd7C
+         w9iUcMCuqI/rayCGD2qZ+XBFvQZ2+tJIPNwiZCL5+sc59YwXD0w1OL+e6nPEiNfH5Z/a
+         IfgZuuUv4GrMQKo6obQr/ZyXbRB1bcmNdhmFaximDJDhmMYh+8h4dDwH27Xx56Xhmlgi
+         N/xSC5yPJ+mhpIiK3u2bHZQC+Hy2bdgFecWIHn73BIvdRsBO8i+lGTpJsHKOUv2wzDBy
+         w8HQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1721280239; x=1721885039;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=k6PZ3BBA0FIv7OCGbWMDNiMSvnIntoNPtciA688Nqwo=;
+        b=Tl+QONvcV4q4ajcB5rHdt9mkGCUEvm8LMs2Uaq4iYF1MWQSyz+JVBZQmmDgs/G70ta
+         B0RBxo8qa71ZIp5pe+lkwun6oSX4oIsbX/3XSoJLgo9KJZt4IoCHiv6cFD52id1SHsWz
+         SrkFZYC+F0m6VcCqxG6DV5JqD5FV1IAFeL9LWhjXIIoI1jTKSCDMvAAiwJ9rB0JuDF4k
+         y4jUmHvLwFYoPTESpeI4PfhZBt28VSbEpblCh+NqrmT/eYbOvUyoDGtuJK1X1/F1PlCO
+         gvGNhNdp7eJKX4bZmm2ORnhujaCDNlEIN766aCR5pvMhjLqQ9RuPXr3mww7xlNUnsNXO
+         iz7g==
+X-Gm-Message-State: AOJu0Ywi5zXfalUgBBwdPAzq5L2miR8T1J1/enxXtwSYwYyPXvuy1qiW
+	AuBj2cybe3tEdYszyaust7oBOVyqrRT/OcOzsu8WJaQq8t+PcVknaVmDFFhdZFiq88jrZCyBPVY
+	vjvFQH/dC+V1kdWNBoS12GzgWkm1GSqYK
+X-Google-Smtp-Source: AGHT+IHTsKhUA8d7SIbxavlK8BMzGtcCIEetNPOEJaXbKICz0w2GHo7ffKwDKn998NQhaKqAv+aInngigbLiFjdKfmk=
+X-Received: by 2002:a05:600c:19c7:b0:426:6945:75b8 with SMTP id
+ 5b1f17b1804b1-427c2cf5c98mr27069025e9.31.1721280238670; Wed, 17 Jul 2024
+ 22:23:58 -0700 (PDT)
+MIME-Version: 1.0
+From: Xiao Han <hanxiao2100@gmail.com>
+Date: Thu, 18 Jul 2024 13:23:48 +0800
+Message-ID: <CAHVr0BYim2JaDhEHAdWqLTMFXCXnvH=1nq-is7pE=oAZxMT2Bw@mail.gmail.com>
+Subject: Gmail to QQ mail
+To: hanxiao2100@qq.com
+Content-Type: multipart/alternative; boundary="0000000000002f59f5061d7ec94f"
+
+--0000000000002f59f5061d7ec94f
+Content-Type: text/plain; charset="UTF-8"
+
+Gmail to QQ mail, Test DKIM and DMARC
+
+--0000000000002f59f5061d7ec94f
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="ltr">Gmail to QQ mail, Test DKIM and DMARC</div>
+
+--0000000000002f59f5061d7ec94f--

@@ -1,0 +1,137 @@
+Received: from TYVP286CU001.outbound.protection.outlook.com (mail-japaneastazolkn190110001.outbound.protection.outlook.com [2a01:111:f403:d405::1])
+	by newxmmxszb1-6.qq.com (NewMX) with SMTP id 30D00CF0
+	for <hanxiao2100@qq.com>; Thu, 18 Jul 2024 13:12:13 +0800
+X-QQ-mid: xmmxszb1-6t1721279533tkyl3802n
+X-QQ-XMAILINFO: MlVZy4NorUNTiScw/JCUcW13G4Q/1Gl6awR/yCMkhCprQ61yz4Zzpfc8YURMS7
+	 BLALm2otAKRJWNGqIlJ4ke7oTyIfddZtip1vQDIy6Absx815T1Z6fnVjNwropvv9v51ZrNv+HozW
+	 9/LTVKNipjAaSaSD3bok5j7YvZphW6rnwllHFOgPcX7LwFimG1QOTV9h8CLqDiKxGK8Fm31U/0Ag
+	 F1I7w8Wc/4mxb6oG/tZ9PQFsSAHqSXVkPcHzf7j302SYM0YOewluLy47/AoI7Eo2FhObXaR0eDGE
+	 94X3qkqtbn499ztuuLAT92rG/iwIOA7bcUA3JAmzlzLE8OhGvmubjIEpKGpeFLYNR4GFwWJG4HT9
+	 47yZqQF3ZI0R9sUYZPOaHVKC6NeMdGOa7d8rceKkMPV8yIpGM1JXcEs3P3VmovxXODDOtNFfLCmU
+	 PKUp7uZQlyPs7Y5a59nDhQnBvNbtyziPisYr3tKfS2jyqJDuJHRacD6T8T8XT23Of8IpzLl+qxFO
+	 K0O8+DSJ0S1IwU+mT70Ud4e/zzTBj9I90oiI2rDKmR4K4cKOQyY8lMtr40IzCIPQLLfr87iKJX3i
+	 1/Jxwa59mDWO+ynPIC/tWOolqJy1vjpUa7oM/o9yFuVv9wNVVSWk4p08mFhkWw495yUXivydCmxE
+	 08Mzt5ReNKmdGzfYISTH7QZpeUYX1wtbdLTibjFfMtxzjPXyVFSkqZKtk7K957XTvnrfIdWS004V
+	 GM4D3qkTrwkJHJin9JF3Z8gz+BLDelHDTF3ADEppxNEEiZeJ4ttZ/n6sNFDWBxTp70MJu9gYswuh
+	 QVKs51Eu+DDQFxYvN2oKuLZo48OkXFtIh+bLo94nlaunqt9e7Ab74My4uXnAgUIfhBElTPGdEx66
+	 zNI3ivyzU2ypmcm6pgBWdBeem4yXZn9zbuvS1/UmJa2ILNSWOWB3shVj+KHgEkEj+LfpFZMknp0E
+	 Yn3SVo2jt0iU5Y2IIJ2CXjxN5L6fgVgej1wpZeT1TASow7y/+q32ZHRp6Ey7yS1kJXbSwAmFABTE
+	 k8gXYPERkFREYlfBAAhYF7KmAaalsqRb+78MwJvA==
+X-QQ-XMRINFO: NyFYKkN4Ny6FSmKK/uo/jdU=
+Authentication-Results: mx.qq.com; spf=pass(2a01:111:f403:d405::1) smtp.mailfr
+	 om=<hanxiao2100@hotmail.com>; dkim=pass(signature was verified) header.d=hot
+	 mail.com; dmarc=pass(p=NONE sp=NONE pct=100) header.from=hotmail.com
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=qEiYgqxxG9EnX+K13yufJsnaiK4qMA6OxT52ocgl8H2KSa/76WkzGeGNmDLigtV3H+IOuEqHOh8SJKZUUczKlUUlOyXk6jN4X3wgXf5GlHh2oLPCcVSTvFkg72taP4YZsVEQ70bd1t0r/p4tnWjBDSgLMtFApUZy2p+H/JChamJLeraiWW+UCxx68i84gIcLOUoiVOwYb+vfuXoJFR82fXQOL/tuu+q/YpfraLAUIcCTEWddhH/lxlleEYDd9rr09Lm282YOI4j/iYeCEKdPvfVB7qrJMzYRaVZYKulLe7E6bCJ95pvIDWe3rc1BevUVbo1Y7idz06ARSNVfpEFhLg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=ihuoTNcVs81jZiKB44HjukhuKgEkk/2b4zuEo9mBTv8=;
+ b=F4k/N6CBYNMwcq8QA84thx6kOOLMUr6zj8kpm+FZPFkXEPe8kaKPxSsHkqK3coBwOlzaEdK4eu5ewdVCKDYND+05mlwvZMgzXQ8tsd6Jc3JkCqpw0UYGxyo2287F9cdZIMNmFFD3V5e1+rhF8UwVHg6eN4mZH5vGfEoYncWSoGN43Jx6RNhWXieepehJM2/e/tP/Z21LjNvSccXgqRZ3kR41bWtckdb0qAVTQ/hMAD3e4ZVXmyFQOH+yAHyrqWEqDz2rWVXBHmVAPUu8BDPyZRzCp/xd2piseaKBuyU2p+GwOlXZG2hhCzL+NbfbH6ICy0fSXK1y1yf0CPXAu11riA==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=none;
+ dkim=none; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;
+ s=selector1;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=ihuoTNcVs81jZiKB44HjukhuKgEkk/2b4zuEo9mBTv8=;
+ b=vIuubWlApOFYR13HffpbEzJpZKdcR9aAXWfqQY1f8lQvnJ5XYewZJH2kYVfAkF/QofCaFYCS/eeB7pNxJyiIJDXnGFHlcJUUqWMvGTnX5sfl+KdIQFTh3152dfIzbEUga+mT2EiwgRWI8F56b5rU79tcAgTCFuz4/8f7GkgbJ1tCwaJkMe4eeH2rW5XnOcZjLoqvgGQYfu1fwXRrNkqqMYxgq/eciGxvtWUrnqrwXQ1pAK3IXkEE+i0oF6vGq5fpK0YH2Sk+Vjc1UtkicFTToNshHebrIbtVOaLblsKQzsaweipnD4K0mQil2t4kU5BRkf+UFv/dFNP7u247f5tVeQ==
+Received: from TY1P286MB3247.JPNP286.PROD.OUTLOOK.COM (2603:1096:400:2e1::5)
+ by OS3P286MB2680.JPNP286.PROD.OUTLOOK.COM (2603:1096:604:1ff::8) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7762.29; Thu, 18 Jul
+ 2024 05:12:12 +0000
+Received: from TY1P286MB3247.JPNP286.PROD.OUTLOOK.COM
+ ([fe80::79eb:1313:dbf4:c4d8]) by TY1P286MB3247.JPNP286.PROD.OUTLOOK.COM
+ ([fe80::79eb:1313:dbf4:c4d8%4]) with mapi id 15.20.7784.016; Thu, 18 Jul 2024
+ 05:12:12 +0000
+From: Song Yanlin <hanxiao2100@hotmail.com>
+To: "hanxiao2100@qq.com" <hanxiao2100@qq.com>
+Subject: Hotmail send to QQ mail
+Thread-Topic: Hotmail send to QQ mail
+Thread-Index: AQHa2ND2trBSfVos1U2ogSWg9iGNJQ==
+Date: Thu, 18 Jul 2024 05:12:12 +0000
+Message-ID:
+ <TY1P286MB32470A4016FBC77605B34EF4B4AC2@TY1P286MB3247.JPNP286.PROD.OUTLOOK.COM>
+Accept-Language: zh-CN, en-US
+Content-Language: zh-CN
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+msip_labels:
+x-ms-exchange-messagesentrepresentingtype: 1
+x-tmn: [pA3JAHKuMx6JVPaX/kaf7PsVjmkmkbY5]
+x-ms-publictraffictype: Email
+x-ms-traffictypediagnostic: TY1P286MB3247:EE_|OS3P286MB2680:EE_
+x-ms-office365-filtering-correlation-id: e1592c73-cb88-4a0d-7946-08dca6e82e84
+x-microsoft-antispam:
+ BCL:0;ARA:14566002|461199028|19110799003|8060799006|3430499032|3412199025|102099032|440099028;
+x-microsoft-antispam-message-info:
+ h8yndDgTXdnKulkQ4omv9KMGuq2Yt1hYVNcZ+s+SicyKlce6RxfwjaXPCgjYx4FQu3y0+p4/YSmVH1O+C44GMyPSuOjXRmZKpdBW+R3VbQiOLQQYToPICrxNck/ZWkLPSa4foZasODlMBgOktvixXTsV/xjBEZBpCVdfOkDYv0hJuiM6Y77Qp2Dm9q5yi1ha75jcxnwH5Nh3cGdBd+fPFl3hwWlujBIVbpgAqDgxF0GvVqPzuxQP7sme9GAMI2/VruiytzU/gowgHdHdTG0daCYy9P30Q5D3f2dtOhD0JTPzHL1ffyXEcwOCdhES8yB7nYkvoqFR0vGou77TuePzDdDnVocRbr7H14Y6Yvy/T5Vxqo/ZztKiUXWXmhTyIS0AXvDukF483aUYqqpGSjR2hC5w6m0eCgyCXDzeYiD2Q1qeQ+menNgmY95CcPj4H6TNDxL0eKm/Z6N3alORMoQyb0Lp7eb+XCwpKDcWFS+KZnLr901y2kd6JvSSPba1+r/61oTonfDUGLILY2CqjZDn8gPzImQd4TGNUoK3IigBcq+yZoaP6OchhepLf6YkS4zXmMhw5mBHrgu7byYU69DxjiLqioHFvMXueaIi4fmX1tJq5aJnaGvnWfzJtZLw2X5ypcqm+R/X/hk579KpFl/tZQ==
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0:
+ =?gb2312?B?bEpaVHhkREU1Ky9uV2E2THJZYmpIcFpHQ0ZoME9uRGprVFZZcVhsSHZUaHcz?=
+ =?gb2312?B?b00xVkdkSytNbk5UaVozQzd5akkxeENSOVBrWjB2OHBaTUNWbUdxdWc4cTFK?=
+ =?gb2312?B?QUlRTjdDRnFlZDN5dkZGOTE1cThnZFI3dmhWK2YxSEJyRGdhVUZPRnRITXBh?=
+ =?gb2312?B?dU1ETjJLSmtBcFRLWEtMY1JpSVdOZDk1UTN5cTlLQnVXeE9zb21kSEhsbHNV?=
+ =?gb2312?B?UDZjUi95SDBhdndXeDV5QjZwa290cEx6ZnQzWkJ0MGNXSXBJejdmeVlsdkVq?=
+ =?gb2312?B?bVhGc25GWVBIK2NLbzNBbEtLbWdXMlZ6VWtUbUQ1Wk5oVEpGMHFyNGFYbUhl?=
+ =?gb2312?B?NXBCMjZMNWs4bTRva2oyeEVaQWo3UmxDL1Z5cUlyK0JzOWN6ZWN6MUdtUkhC?=
+ =?gb2312?B?OFJVTzl5SlgySTlURStKdENGQ05meGlrb2NseHRKVUFwbHM0bWExbHFYcmgr?=
+ =?gb2312?B?aXZUVC8zRFpnQ0UybXgxM1lsQlVyVmJQMlo4ZS9HNFJ5emo4WHdRVG9mZ3N3?=
+ =?gb2312?B?Qm1rYU0veTRhNGR2K0dXd0FkYmdxVkdjMkZ6T1ozb085YzYxUjdEYm9YZ3Bt?=
+ =?gb2312?B?RlEzTzhLaEZ6TDI2VndvbTZFTEl0dTNvTWlGZm5IcVoxTVl6VVhKOTdJZ2t2?=
+ =?gb2312?B?a1VZNmFMOUc1RU1xMExCdUlTUGVsVEYzczV3a1duOTdRZ0phZ0xOdTV5Ri8y?=
+ =?gb2312?B?MHhUQlZ1NjVqS3cvYTRPTmIrY3oxRkRaTXRuM0ZkNXcvLzR1d2VkU3VyUCs1?=
+ =?gb2312?B?RTZaRC9uclVPL1Zmc2Q2MUZEU0o1VzkrejFLVEFadkIzbDlNenhSUVhSbm92?=
+ =?gb2312?B?VzVDMDJRaE0rZ05ZdUpiN3VSclhkelpGVGg5SDNBeVJCTXFoQXNOUkFOTGpr?=
+ =?gb2312?B?d21zeDUrK2IxVjFhUS9GNFpVYUs1N2pPL1Yvd2dHMkozUlFQbm50L09aVFNM?=
+ =?gb2312?B?aWdOWHBuQ2V3c3R3NFJVN0c3MWVITHlVWTd3ODB1L3pyeU94bkFtZlNjbFpa?=
+ =?gb2312?B?MUMyQy9RM3VlTFlZU3JId3BUSUwwWlRWYVIvbEUyRTU5b0l4RVhLNmg0UEpk?=
+ =?gb2312?B?R1NmYzZKNmVVNURjRFRKYTZWZS90dXlNVDFvQjJPOXFPK1oreFBoa3pMYnJw?=
+ =?gb2312?B?ZG12b29kSU1SSlFwbGFTV1hKWmZKbWhlNnZJMUpYRmlRZHVOQ3NhN3BsUEhl?=
+ =?gb2312?B?NDArYXZvOHBCWWZZRW96RXhwQmJqMytpM1FNckpxc0VVZEFmQXpPMXVkNUtZ?=
+ =?gb2312?B?QkJVdjN6TmlCWWtOeWphaWNSUXFwSzd0UkgwMU1QOWc2NkpuSGxFdm9oVVlr?=
+ =?gb2312?B?M2w3eHBjTzloeFpnb01VUzRRTmJodDhOSytwbVAraW92UjkyUFYvSGZPODZx?=
+ =?gb2312?B?YXBpKzl0WjhvT3pFU0hUcmt6RmV5RXorWkxJakhMTEFHWE5QL0JZS3RxblEz?=
+ =?gb2312?B?ZlZOYTFzQlFKMVByc1BkQ3RTeGhJRm9EZ3IxNmxXanJaNS8ycEtVK0hGcVE0?=
+ =?gb2312?B?YkU5SkF3Y1NtbC8rYmFvVHlqeCt6VUdHdEw3MmdlR3FsK0xoaTdyRS9QVm5m?=
+ =?gb2312?B?emdnem5sWWxzcWxZMGtXSnhnOFk3MXJIcGZZRXpGamdIZm1ua2JiV2dJd3U0?=
+ =?gb2312?Q?XwGE8wG6+MTySyz/jqWGn0WvEsZAdTYZoIxtm01ZLs9c=3D?=
+Content-Type: multipart/alternative;
+	boundary="_000_TY1P286MB32470A4016FBC77605B34EF4B4AC2TY1P286MB3247JPNP_"
+MIME-Version: 1.0
+X-OriginatorOrg: sct-15-20-7719-20-msonline-outlook-6efd8.templateTenant
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: TY1P286MB3247.JPNP286.PROD.OUTLOOK.COM
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-CrossTenant-Network-Message-Id: e1592c73-cb88-4a0d-7946-08dca6e82e84
+X-MS-Exchange-CrossTenant-originalarrivaltime: 18 Jul 2024 05:12:12.2347
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-rms-persistedconsumerorg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: OS3P286MB2680
+
+--_000_TY1P286MB32470A4016FBC77605B34EF4B4AC2TY1P286MB3247JPNP_
+Content-Type: text/plain; charset="gb2312"
+Content-Transfer-Encoding: base64
+
+SSB3YW50IHRvIHRlc3QgREtJTSBhbmQgRE1BUkMNCg==
+
+--_000_TY1P286MB32470A4016FBC77605B34EF4B4AC2TY1P286MB3247JPNP_
+Content-Type: text/html; charset="gb2312"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dgb2312">
+<style type=3D"text/css" style=3D"display:none;"> P {margin-top:0;margin-bo=
+ttom:0;} </style>
+</head>
+<body dir=3D"ltr">
+<div class=3D"elementToProof" style=3D"font-family: Calibri, Helvetica, san=
+s-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+I want to test DKIM and DMARC</div>
+</body>
+</html>
+
+--_000_TY1P286MB32470A4016FBC77605B34EF4B4AC2TY1P286MB3247JPNP_--

@@ -1,4 +1,9 @@
 #!/usr/bin/env python3
+
+"""
+仅对 邮件 body 为 非 multipart/alternative 有效。
+"""
+
 from typing import Dict, Optional
 import re
 import sys
@@ -155,7 +160,7 @@ if __name__ == '__main__':
     if verify_signature(hashed_header, signature, public_key):
         print("signature is valid")
     else:
-        print("signature is NOOOOT valid")
+        print("signature is NOT valid")
     print("done")
 
 
