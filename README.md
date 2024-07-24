@@ -4,15 +4,16 @@ tldr: We take an email and verify the DKIM-Signature step by step using python. 
 
 I recently had an issue with my DKIM signatures. I just got a 'Signature wrong' message and couldn't find out what the problem was. So I decided to take a look into.
 
-What is DKIM?
+* What is DKIM?
+
 If your mail server supports DKIM (Domain Keys Identified Mail), it signs the email headers and body. So you can be sure that the message was not modified.
 
-# High level perspective - How does it work?
-1) Alice writes an email to Bob (e.g. with Thunderbird). No magic is happening here
-2) The email goes to the mail server Alice has configured in her mail client
-3) The mail server does the DKIM magic: It signs the email of Alice (e.g. with RSA) and adds a DKIM-Signature header to the email
-4) The mail server forwards the message to Bob's mail server
-5) Bob's mail server verifies the DKIM-Signature. Therefore it needs the public key of Alice which is stored in a DNS record
+## High level perspective - How does it work?
+1. Alice writes an email to Bob (e.g. with Thunderbird). No magic is happening here
+2. The email goes to the mail server Alice has configured in her mail client
+3. The mail server does the DKIM magic: It signs the email of Alice (e.g. with RSA) and adds a DKIM-Signature header to the email
+4. The mail server forwards the message to Bob's mail server
+5. Bob's mail server verifies the DKIM-Signature. Therefore it needs the public key of Alice which is stored in a DNS record
 
 If you are using Thunderbird you can install `DKIM Verifier` to see if the DKIM signature is valid  
 ![Thunderbird](/screenshots/2020-04-16-084010_screenshot.png)  
@@ -47,12 +48,12 @@ kmille@linbox ~% dig 2019022801._domainkey.androidloves.me txt +short
 ```
 
 The response is self-explanatory: p is the base64 encoded public key. The steps to verify the signature are the fofllowing:  
-1) calculate the hash of the body
-2) compare the calculated hash with the bh value from the DKIM-Signature header of the email
-3) construct `hashed_header` (the message which is signed) based on parameter h of the DKIM-Signature header
-4) verify the signature
+1. calculate the hash of the body
+2. compare the calculated hash with the bh value from the DKIM-Signature header of the email
+3. construct `hashed_header` (the message which is signed) based on parameter h of the DKIM-Signature header
+4. verify the signature
 
-# Let's dig into the details
+## Let's dig into the details
 In Thunderbird you can save emails as a file (File -> Save as). I saved my email as email.eml. Here it is:
 
 ```Return-Path: <christian.schneider@androidloves.me>
@@ -377,13 +378,13 @@ Exponent: 65537 (0x10001)
 ```
 
 
-# Last words
+## Last words
 - [mail-tester](https://www.mail-tester.com/) is a great tool. Use it for debugging and regular tests
 - use [python-dkim](https://www.archlinux.org/packages/community/any/python-dkim/) for a RFC compliant DKIM verifier (checkout -d for more debug), helped me a lot
 - you can test emails online using https://www.appmaildev.com/en/dkimfile
 - [good read about DKIM](https://dkimcore.org/specification.htm) (basically the same like this post without code)
 
-# Meta (my first "blog post")
+## Meta (my first "blog post")
 - Github Markdown is okayish (the :date: emojicons suck and I couldn't fix it without adding `)
 - writing things down is really time consuming
 - perfectionism sucks
