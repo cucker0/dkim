@@ -5,3 +5,4 @@ pycryptodome
 typed-ast
 typing
 typing-extensions
+dkimpy

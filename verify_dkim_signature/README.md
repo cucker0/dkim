@@ -16,7 +16,7 @@ If your mail server supports DKIM (Domain Keys Identified Mail), it signs the em
 5. Bob's mail server verifies the DKIM-Signature. Therefore it needs the public key of Alice which is stored in a DNS record
 
 If you are using Thunderbird you can install `DKIM Verifier` to see if the DKIM signature is valid  
-![Thunderbird](/screenshots/2020-04-16-084010_screenshot.png)  
+![Thunderbird](/verify_dkim_signature/screenshots/2020-04-16-084010_screenshot.png)  
 
 You can use [DMARC](https://en.wikipedia.org/wiki/DMARC) to specify what a mail server should do if a DKIM signature is wrong.
 ![Thunderbird](screenshots/2020-04-19-111833_screenshot.png)  

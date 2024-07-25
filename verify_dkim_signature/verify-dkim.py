@@ -26,16 +26,17 @@ def hash_body(body: str) -> str:
     # ** Reduce all sequences of WSP within a line to a single SP ** 
     canonicalized_body = body.strip().encode() + b"\r\n"
     bh = b64encode(SHA256.new(canonicalized_body).digest())
-    assert bh == b'aeLbTnlUQQv2UFEWKHeiL5Q0NjOwj4ktNSInk8rN/P0='
+    # assert bh == b'aeLbTnlUQQv2UFEWKHeiL5Q0NjOwj4ktNSInk8rN/P0='
     return bh.decode()
 
 
 def get_public_key(domain: str, selector: str) -> RSA.RsaKey:
-    dns_response = dns.resolver.query("{}._domainkey.{}.".format(selector, domain), "TXT").response.answer[0].to_text()
+    # dns_response = dns.resolver.query("{}._domainkey.{}.".format(selector, domain), "TXT").response.answer[0].to_text()
+    dns_response = dns.resolver.resolve("{}._domainkey.{}.".format(selector, domain), "TXT").response.answer[0].to_text()
     p = re.search(r'p=([\w\d/+]*)', dns_response).group(1)
     pub_key = RSA.importKey(b64decode(p))
-    assert pub_key.e == 65537
-    assert pub_key.n == 109840904909940404959744221876858620709969218326506407082221779394032326489812790786649034812718574099046117725854400828455845069780702401414898758049907995661494814186559221483509803472525659208951140463116595200877740816407104014421586827141402457631883375757223612729692148186236929622346251839432830432649
+    # assert pub_key.e == 65537
+    # assert pub_key.n == 109840904909940404959744221876858620709969218326506407082221779394032326489812790786649034812718574099046117725854400828455845069780702401414898758049907995661494814186559221483509803472525659208951140463116595200877740816407104014421586827141402457631883375757223612729692148186236929622346251839432830432649
     return pub_key
 
 
@@ -96,7 +97,7 @@ def hash_headers(mail: email.message.Message, header_to_hash: str, bh: str) -> S
     headers = re.sub(r'b=[\w0-9\s/+=]+', "b=", headers) #replace b=... with be=
 
     hheader = SHA256.new(headers.encode())
-    assert hheader.hexdigest() == "5188ff42a5ab71ae70236cf66822ab963b0977a3e7d932237fbfc35005195720"
+    # assert hheader.hexdigest() == "5188ff42a5ab71ae70236cf66822ab963b0977a3e7d932237fbfc35005195720"
     return hheader
 
 
@@ -133,12 +134,12 @@ def verify_signature(hashed_header: SHA256.SHA256Hash, signature: bytes, public_
 
     padded_hash = pkcs1_v1_5_encode(hashed_header, emLen)
 
-    assert padded_hash == expected_message
+    # assert padded_hash == expected_message
     return padded_hash == expected_message
 
 
 if __name__ == '__main__':
-    mail = email.message_from_bytes(open("email.eml", "rb").read())
+    mail = email.message_from_bytes(open("./email.eml", "rb").read())
     dkim_header = mail.get("DKIM-Signature")
 
     dkim_parameter = parse_dkim_header(dkim_header)
@@ -159,6 +160,8 @@ if __name__ == '__main__':
 
     if verify_signature(hashed_header, signature, public_key):
         print("signature is valid")
+        print()
+        print(f"body hash match. body hash: {body_hash}, \nDKIM-Signature[bh]: {dkim_parameter['bh']}")
     else:
         print("signature is NOT valid")
     print("done")
