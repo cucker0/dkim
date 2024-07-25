@@ -56,7 +56,7 @@ Test email displayed as text only
     headers=[b'from', b'to', b'subject', b'message-id']
 
     # Generate message signature
-    sig = dkim.sign(message=msg.as_bytes(), selector=b'introduction', domain=b'example.com', privkey=private_key.encode(), include_headers=headers)
+    sig = dkim.sign(message=msg.as_bytes(), selector=b's20240725', domain=b'cucker.top', privkey=private_key.encode(), include_headers=headers)
     sig = sig.decode()
 
     # Add the DKIM-Signature
@@ -81,6 +81,9 @@ def smtp_sendmail(msg: Message):
         mx_server = mx_set[0].exchange.to_text()
 
     smtp_connection = smtplib.SMTP(host=mx_server, port=25)
+    smtp_connection.ehlo()
+    smtp_connection.starttls()  # 启用TLS
+
     # sendmail function takes 3 arguments: sender's address, recipient's address
     # and message to send - here it is sent as one string.
     smtp_connection.debuglevel = 1
