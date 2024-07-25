@@ -107,5 +107,7 @@ reply: retcode (221); Msg: b'2.0.0 closing connection 5614622812f47-3db1348b073s
 ```
 
 * Gmail 邮箱查收邮件
-![](../image/gmail.png)
 
+![](../image/gmail1.png)
+
+![](../image/gmail.png)
