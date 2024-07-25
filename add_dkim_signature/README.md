@@ -3,7 +3,7 @@
 ## 准备工作
 1. 安装依赖包
 ```bash
-pip install dkimpy 
+pip install dkimpy dnspython
 ```
 
 2. 生成 SHA key-peer
