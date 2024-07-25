@@ -19,7 +19,7 @@ python ./gen_rsa_key_peer.py
 如 域名：cucker.top
 
 创建先关的记录   
-[](../image/mail_dns_rr.png)
+![](../image/mail_dns_rr.png)
 
 验证 DNS 记录是否生效
 ```bash
@@ -107,5 +107,5 @@ reply: retcode (221); Msg: b'2.0.0 closing connection 5614622812f47-3db1348b073s
 ```
 
 * Gmail 邮箱查收邮件
-[](../image/gmail.png)
+![](../image/gmail.png)
 
