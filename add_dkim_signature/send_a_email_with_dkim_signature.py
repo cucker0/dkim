@@ -56,7 +56,9 @@ Test email displayed as text only
     headers=[b'from', b'to', b'subject', b'message-id']
 
     # Generate message signature
-    sig = dkim.sign(message=msg.as_bytes(), selector=b's20240725', domain=b'cucker.top', privkey=private_key.encode(), include_headers=headers)
+    sig = dkim.sign(message=msg.as_bytes(), selector=b's20240725', domain=b'cucker.top', privkey=private_key.encode(),
+                    canonicalize=(b'relaxed', b'simple'), signature_algorithm=b'rsa-sha256',
+                    include_headers=headers)
     sig = sig.decode()
 
     # Add the DKIM-Signature
